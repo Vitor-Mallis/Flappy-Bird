@@ -8,18 +8,26 @@ public class Bird : MonoBehaviour {
     public static Bird instance;
     
     [SerializeField]
-    private Rigidbody2D rigidBody;
+    Rigidbody2D rigidBody;
     [SerializeField]
-    private Animator animator;
+    Animator animator;
 
-    private float forwardSpeed = 3f;
-    private float bounceSpeed = 4f;
+    float forwardSpeed = 3f;
+    float bounceSpeed = 4f;
 
-    private bool didFlap;
+    bool didFlap;
     [HideInInspector]
     public bool isAlive = true;
 
-    private Button flapButton;
+    Button flapButton;
+
+    [SerializeField]
+    AudioSource audioSource;
+
+    [SerializeField]
+    AudioClip flap, die, point;
+
+    int score;
 
     void Awake() {
         CreateInstance();
@@ -40,6 +48,7 @@ public class Bird : MonoBehaviour {
                 didFlap = false;
                 rigidBody.velocity = new Vector2(0, bounceSpeed);
                 animator.SetTrigger("Flap");
+                audioSource.PlayOneShot(flap);
             }
 
             if (rigidBody.velocity.y > 0) {
@@ -67,5 +76,22 @@ public class Bird : MonoBehaviour {
 
     public float GetPositionX() {
         return transform.position.x;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.tag == "PipeHolder") {
+            score++;
+            audioSource.PlayOneShot(point);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (isAlive) {
+            if (collision.gameObject.tag == "Pipe" || collision.gameObject.tag == "Ground") {
+                isAlive = false;
+                animator.SetTrigger("Died");
+                audioSource.PlayOneShot(die);
+            }
+        }
     }
 }

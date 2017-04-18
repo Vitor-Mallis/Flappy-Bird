@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Bird Scripts\Bird.cs" />
     <Compile Include="Assets\Scripts\Camera Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Collector Scripts\BackgroundCollector.cs" />
+    <Compile Include="Assets\Scripts\Collector Scripts\PipeCollector.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
