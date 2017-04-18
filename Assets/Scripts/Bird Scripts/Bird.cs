@@ -82,6 +82,7 @@ public class Bird : MonoBehaviour {
         if(collision.tag == "PipeHolder") {
             score++;
             audioSource.PlayOneShot(point);
+			GameplayController.instance.SetScore (score);
         }
     }
 
@@ -91,6 +92,7 @@ public class Bird : MonoBehaviour {
                 isAlive = false;
                 animator.SetTrigger("Died");
                 audioSource.PlayOneShot(die);
+				GameplayController.instance.GameOver (score);
             }
         }
     }

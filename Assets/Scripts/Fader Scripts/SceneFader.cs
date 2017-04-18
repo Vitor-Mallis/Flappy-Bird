@@ -32,10 +32,10 @@ public class SceneFader : MonoBehaviour {
 	IEnumerator FadeInOut(string scene) {
 		canvas.SetActive (true);
 		animator.Play ("FadeOut");
-		yield return new WaitForSeconds (1f);
+		yield return StartCoroutine(MyCoroutine.WaitForRealSeconds (1f));
 		SceneManager.LoadScene (scene);
 		animator.Play ("FadeIn");
-		yield return new WaitForSeconds (.7f);
+		yield return StartCoroutine(MyCoroutine.WaitForRealSeconds (.7f));
 		canvas.SetActive (false);
 	}
 }

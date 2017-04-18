@@ -51,8 +51,10 @@
      <Compile Include="Assets\Scripts\Collector Scripts\BackgroundCollector.cs" />
      <Compile Include="Assets\Scripts\Collector Scripts\PipeCollector.cs" />
      <Compile Include="Assets\Scripts\Controller Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\Controller Scripts\GameplayController.cs" />
      <Compile Include="Assets\Scripts\Controller Scripts\MenuController.cs" />
      <Compile Include="Assets\Scripts\Fader Scripts\SceneFader.cs" />
+     <Compile Include="Assets\Scripts\My Coroutine Scripts\MyCoroutine.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
