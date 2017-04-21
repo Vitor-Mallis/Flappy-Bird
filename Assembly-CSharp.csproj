@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2968D2C5-7A9A-5768-B3BA-385462FD457C}</ProjectGuid>
+    <ProjectGuid>{071E10C7-98A1-E18C-E3D1-1B0603687006}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,6 +46,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Fabric\Kits\Twitter\Runtime\AndroidTwitterImpl.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Runtime\EditorTwitterImpl.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Runtime\IOSTwitterImpl.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Runtime\ITwitter.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Runtime\Models\ApiError.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Runtime\Models\AuthToken.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Runtime\Models\Card.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Runtime\Models\TwitterSession.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Runtime\Twitter.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Runtime\TwitterComponent.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Runtime\TwitterInit.cs" />
+     <Compile Include="Assets\Fabric\Runtime\Fabric.cs" />
+     <Compile Include="Assets\Fabric\Runtime\FabricInit.cs" />
+     <Compile Include="Assets\Fabric\Runtime\FabricUtils.cs" />
+     <Compile Include="Assets\Fabric\Runtime\Internal\AndroidImpl.cs" />
+     <Compile Include="Assets\Fabric\Runtime\Internal\IOSImpl.cs" />
+     <Compile Include="Assets\Fabric\Runtime\Internal\Impl.cs" />
+     <Compile Include="Assets\Fabric\ThirdParty\MiniJSON.cs" />
      <Compile Include="Assets\Scripts\Bird Scripts\Bird.cs" />
      <Compile Include="Assets\Scripts\Camera Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Collector Scripts\BackgroundCollector.cs" />
@@ -53,8 +71,91 @@
      <Compile Include="Assets\Scripts\Controller Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Controller Scripts\GameplayController.cs" />
      <Compile Include="Assets\Scripts\Controller Scripts\MenuController.cs" />
+     <Compile Include="Assets\Scripts\Controller Scripts\TwitterController.cs" />
      <Compile Include="Assets\Scripts\Fader Scripts\SceneFader.cs" />
      <Compile Include="Assets\Scripts\My Coroutine Scripts\MyCoroutine.cs" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-sw720dp-v13\values-sw720dp-v13.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-es\values-es.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ms\values-ms.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ro\values-ro.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_pressed.xml" />
+     <None Include="Assets\Fabric\NOTICE.txt" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-en-rGB\values-en-rGB.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-in\values-in.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values\values.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\layout\tw__activity_share_email.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-iw\values-iw.xml" />
+     <None Include="Assets\Plugins\Android\fabric\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-uk\values-uk.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ur\values-ur.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ca\values-ca.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\layout\tw__activity_oauth.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ja\values-ja.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-pt\values-pt.xml" />
+     <None Include="Assets\Plugins\Android\twitterkit-deps\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-en-rSS\values-en-rSS.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-sr\values-sr.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_default_light.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-xxhdpi-v4\values-xxhdpi-v4.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\layout\tw__composer_view.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\layout\tw__app_card.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-sk\values-sk.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\drawable\tw__btn_composer_tweet.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ar\values-ar.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\layout\tw__activity_composer.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\drawable\tw__install_button_border.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-bg\values-bg.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_default.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-sv\values-sv.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-fi\values-fi.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-fa\values-fa.xml" />
+     <None Include="Assets\Plugins\Android\fabric-init\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-bn\values-bn.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ko\values-ko.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\values\values.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-cs\values-cs.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-zh-rCN\values-zh-rCN.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_light.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-hi\values-hi.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-tr\values-tr.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-kn\values-kn.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-mr\values-mr.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-gu\values-gu.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\values-v21\values-v21.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-de\values-de.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\drawable\tw__app_info_layout_border.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-hr\values-hr.xml" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-hu\values-hu.xml" />
+     <None Include="Assets\Plugins\Android\fabric\NOTICE.txt" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-vi\values-vi.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ru\values-ru.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_disabled.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-zh-rTW\values-zh-rTW.xml" />
+     <None Include="Assets\Plugins\Android\fabric\Template-AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-th\values-th.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-da\values-da.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\values-v11\values-v11.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-pl\values-pl.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__transparent.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_pressed_light.xml" />
+     <None Include="Assets\Plugins\Android\twitterkit-wrapper\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-el\values-el.xml" />
+     <None Include="Assets\Plugins\Android\fabric\res\values\strings.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-hdpi-v4\values-hdpi-v4.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-xhdpi-v4\values-xhdpi-v4.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-nl\values-nl.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-it\values-it.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-tl\values-tl.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-nb\values-nb.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-en-rXX\values-en-rXX.xml" />
+     <None Include="Assets\Plugins\Android\fabric\THIRDPARTYLICENSE.txt" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-fr\values-fr.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ta\values-ta.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_text_color_light.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -75,6 +176,12 @@
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="Analytics">
+ <HintPath>C:/Vítor/Projetos/Flappy Bird/Assets/Fabric/Managed/Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="Validator">
+ <HintPath>C:/Vítor/Projetos/Flappy Bird/Assets/Fabric/Managed/Validator.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

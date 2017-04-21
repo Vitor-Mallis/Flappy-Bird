@@ -59,4 +59,12 @@ public class MenuController : MonoBehaviour {
 	public void StartGame() {
 		SceneFader.instance.ChangeScene ("Gameplay");
 	}
+
+    public void Share() {
+        TwitterController.instance.Share();
+    }
+
+    public void LogOnTwitter() {
+        TwitterController.instance.StartLogin();
+    }
 }

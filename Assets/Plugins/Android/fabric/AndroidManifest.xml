@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="io.fabric.sdk.android.unity">
+  <application>
+    <meta-data android:name="io.fabric.ApiKey" android:value="a639267a12f15401f2a97b843ebbd077f8cb3139" />
+    <meta-data android:name="io.fabric.twittercore.key" android:value="ArbuofHAmWHV0Tj0K2EOobUtV" />
+    <meta-data android:name="io.fabric.twittercore.secret" android:value="	XCvlpfmqjHTF7Ybx2J2zuF2AWn9JIPBHvcXyzbzafKLWYWYET0" />
+    <meta-data android:name="io.fabric.twittercore.qualified" android:value="com.twitter.sdk.android.core.TwitterCore" />
+    <meta-data android:name="io.fabric.twittercore.unqualified" android:value="TwitterCore" />
+    <meta-data android:name="io.fabric.tweetcomposer.qualified" android:value="com.twitter.sdk.android.tweetcomposer.TweetComposer" />
+    <meta-data android:name="io.fabric.tweetcomposer.unqualified" android:value="TweetComposer" />
+    <meta-data android:name="io.fabric.kits" android:value="twittercore,tweetcomposer" />
+    <meta-data android:name="io.fabric.InitializationType" android:value="Automatic" />
+  </application>
+</manifest>

@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{3463DB22-135C-E184-17F9-C9EFCF92E40A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_0;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_HAS_GOOGLEVR;ENABLE_DUCK_TYPING</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Fabric\Editor\CommonBuild\FabricCommonBuild.cs" />
+     <Compile Include="Assets\Fabric\Editor\FabricSetup.cs" />
+     <Compile Include="Assets\Fabric\Editor\FabricUtils.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\API\AsyncV1.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\API\Parser.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\API\V1.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Controller\KitController.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Controller\KitInstallationChecker.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Controller\KitUtils.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Controller\PluginController.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Detail\AsyncTaskRunner.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Detail\AsyncTaskRunnerBuilder.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Detail\Runner.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Detail\Strings.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Detail\TimeUtils.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Editor.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Images\Loader.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Model\App.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Model\ImportedKit.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Model\KitStatus.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Model\Organization.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Model\Settings.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Net\Constants.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Net\OAuth\Client.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Net\Utils.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\Resources\Manager.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\View\Animation\Driver.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\View\ConflictResolutionPage.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\View\KitSelectionPage.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\View\LoginPage.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\View\ManualInitializationPage.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\View\OrganizationsPage.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\View\Page.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\View\Render.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\View\Templates\InstructionsPage.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\View\Templates\PrefabPage.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\View\UpdatePage.cs" />
+     <Compile Include="Assets\Fabric\Editor\GUI\View\ValidationPage.cs" />
+     <Compile Include="Assets\Fabric\Editor\Info.cs" />
+     <Compile Include="Assets\Fabric\Editor\Postbuild\FabricBuildEventAndroid.cs" />
+     <Compile Include="Assets\Fabric\Editor\Postbuild\FabricPostBuildiOS.cs" />
+     <Compile Include="Assets\Fabric\Editor\Postbuild\PostBuildiOS.cs" />
+     <Compile Include="Assets\Fabric\Editor\Prebuild\AndroidBuildPropertiesManager.cs" />
+     <Compile Include="Assets\Fabric\Editor\Prebuild\FabricAndroidPrebuild.cs" />
+     <Compile Include="Assets\Fabric\Editor\Prebuild\PropertiesWriter.cs" />
+     <Compile Include="Assets\Fabric\Editor\ThirdParty\xcodeapi\AssetCatalog.cs" />
+     <Compile Include="Assets\Fabric\Editor\ThirdParty\xcodeapi\JsonParser.cs" />
+     <Compile Include="Assets\Fabric\Editor\ThirdParty\xcodeapi\PBX\Elements.cs" />
+     <Compile Include="Assets\Fabric\Editor\ThirdParty\xcodeapi\PBX\Lexer.cs" />
+     <Compile Include="Assets\Fabric\Editor\ThirdParty\xcodeapi\PBX\Objects.cs" />
+     <Compile Include="Assets\Fabric\Editor\ThirdParty\xcodeapi\PBX\Parser.cs" />
+     <Compile Include="Assets\Fabric\Editor\ThirdParty\xcodeapi\PBX\Sections.cs" />
+     <Compile Include="Assets\Fabric\Editor\ThirdParty\xcodeapi\PBX\Serializer.cs" />
+     <Compile Include="Assets\Fabric\Editor\ThirdParty\xcodeapi\PBX\Utils.cs" />
+     <Compile Include="Assets\Fabric\Editor\ThirdParty\xcodeapi\PBXProject.cs" />
+     <Compile Include="Assets\Fabric\Editor\ThirdParty\xcodeapi\PBXProjectData.cs" />
+     <Compile Include="Assets\Fabric\Editor\ThirdParty\xcodeapi\PlistParser.cs" />
+     <Compile Include="Assets\Fabric\Editor\ThirdParty\xcodeapi\Properties\AssemblyInfo.cs" />
+     <Compile Include="Assets\Fabric\Editor\Update\Custodian.cs" />
+     <Compile Include="Assets\Fabric\Editor\Update\Dependency\DependencyGraphLegacy.cs" />
+     <Compile Include="Assets\Fabric\Editor\Update\Dependency\DependencyGraphManager.cs" />
+     <Compile Include="Assets\Fabric\Editor\Update\Dependency\DependencyGraphObject.cs" />
+     <Compile Include="Assets\Fabric\Editor\Update\Dependency\DependencyGraphResolver.cs" />
+     <Compile Include="Assets\Fabric\Editor\Update\FabricInstaller.cs" />
+     <Compile Include="Assets\Fabric\Editor\Update\FileUtils.cs" />
+     <Compile Include="Assets\Fabric\Editor\Update\PeriodicAnalyticsPinger.cs" />
+     <Compile Include="Assets\Fabric\Editor\Update\PeriodicUpdateChecker.cs" />
+     <Compile Include="Assets\Fabric\Editor\Update\PeriodicUpdateManager.cs" />
+     <Compile Include="Assets\Fabric\Editor\Update\TimeoutWebClient.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Editor\GUI\Controller\Controller.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Editor\GUI\TwitterMenuItems.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Editor\GUI\View\DocumentationPage.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Editor\GUI\View\KeyEntryPage.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Editor\GUI\View\KeyProvisioningPage.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Editor\Info.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Editor\Postbuild\TwitterPostBuildiOS.cs" />
+     <Compile Include="Assets\Fabric\Kits\Twitter\Editor\TwitterSetup.cs" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-sw720dp-v13\values-sw720dp-v13.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-es\values-es.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ms\values-ms.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ro\values-ro.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_pressed.xml" />
+     <None Include="Assets\Fabric\NOTICE.txt" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-en-rGB\values-en-rGB.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-in\values-in.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values\values.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\layout\tw__activity_share_email.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-iw\values-iw.xml" />
+     <None Include="Assets\Plugins\Android\fabric\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-uk\values-uk.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ur\values-ur.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ca\values-ca.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\layout\tw__activity_oauth.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ja\values-ja.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-pt\values-pt.xml" />
+     <None Include="Assets\Plugins\Android\twitterkit-deps\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-en-rSS\values-en-rSS.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-sr\values-sr.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_default_light.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-xxhdpi-v4\values-xxhdpi-v4.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\layout\tw__composer_view.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\layout\tw__app_card.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-sk\values-sk.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\drawable\tw__btn_composer_tweet.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ar\values-ar.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\layout\tw__activity_composer.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\drawable\tw__install_button_border.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-bg\values-bg.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_default.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-sv\values-sv.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-fi\values-fi.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-fa\values-fa.xml" />
+     <None Include="Assets\Plugins\Android\fabric-init\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-bn\values-bn.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ko\values-ko.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\values\values.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-cs\values-cs.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-zh-rCN\values-zh-rCN.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_light.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-hi\values-hi.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-tr\values-tr.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-kn\values-kn.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-mr\values-mr.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-gu\values-gu.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\values-v21\values-v21.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-de\values-de.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\drawable\tw__app_info_layout_border.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-hr\values-hr.xml" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-hu\values-hu.xml" />
+     <None Include="Assets\Plugins\Android\fabric\NOTICE.txt" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-vi\values-vi.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ru\values-ru.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_disabled.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-zh-rTW\values-zh-rTW.xml" />
+     <None Include="Assets\Plugins\Android\fabric\Template-AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-th\values-th.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-da\values-da.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\res\values-v11\values-v11.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-pl\values-pl.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__transparent.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_pressed_light.xml" />
+     <None Include="Assets\Plugins\Android\twitterkit-wrapper\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-el\values-el.xml" />
+     <None Include="Assets\Plugins\Android\fabric\res\values\strings.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-hdpi-v4\values-hdpi-v4.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-xhdpi-v4\values-xhdpi-v4.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-nl\values-nl.xml" />
+     <None Include="Assets\Plugins\Android\tweet-composer\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-it\values-it.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-tl\values-tl.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-nb\values-nb.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-en-rXX\values-en-rXX.xml" />
+     <None Include="Assets\Plugins\Android\fabric\THIRDPARTYLICENSE.txt" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-fr\values-fr.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\values-ta\values-ta.xml" />
+     <None Include="Assets\Plugins\Android\twitter-core\res\drawable\tw__login_btn_text_color_light.xml" />
+ <Reference Include="UnityEditor.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TestRunner">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TreeEditor">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/Editor/UnityEditor.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.HoloLens">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Purchasing">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/Editor/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.VR">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="Analytics">
+ <HintPath>C:/Vítor/Projetos/Flappy Bird/Assets/Fabric/Managed/Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="Validator">
+ <HintPath>C:/Vítor/Projetos/Flappy Bird/Assets/Fabric/Managed/Validator.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{071E10C7-98A1-E18C-E3D1-1B0603687006}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

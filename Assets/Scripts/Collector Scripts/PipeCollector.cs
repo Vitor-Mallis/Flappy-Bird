@@ -5,7 +5,7 @@ using UnityEngine;
 public class PipeCollector : MonoBehaviour {
 
     GameObject[] pipeHolders;
-    float distance = 2.5f;
+    float distance = 3f;
     float minY = -1.62f;
     float maxY = 1.65f;
     float lastPipeX;
